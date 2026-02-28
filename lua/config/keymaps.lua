@@ -28,6 +28,7 @@ map("n", "<leader>ef", "<cmd>NvimTreeFocus<CR>", vim.tbl_extend("force", opts, {
 map("n", "<leader>tt", "<cmd>Terminal<CR>", vim.tbl_extend("force", opts, { desc = "Toggle terminal" }))
 map("n", "<leader>tv", "<cmd>vsplit | terminal<CR>", vim.tbl_extend("force", opts, { desc = "Vertical terminal" }))
 map("n", "<leader>th", "<cmd>split | terminal<CR>", vim.tbl_extend("force", opts, { desc = "Horizontal terminal" }))
+map({ "n", "t" }, "<leader>`", "<cmd>ToggleTerm<CR>", vim.tbl_extend("force", opts, { desc = "Toggle floating terminal" }))
 
 vim.api.nvim_create_autocmd("TermClose", {
   pattern = "*lazygit",
